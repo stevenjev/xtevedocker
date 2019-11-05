@@ -24,8 +24,6 @@ VOLUME /tmp/xteve
 EXPOSE 34400
 
 # Healthcheck
-HEALTHCHECK --interval=30s --start-period=30s --retries=3 --timeout=10s \
-  CMD curl -f http://localhost:34400/ || exit 1
   
 # Entrypoint should be the base command
 ENTRYPOINT ["/xteve/xteve"]
